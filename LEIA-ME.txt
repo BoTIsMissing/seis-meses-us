@@ -1,0 +1,22 @@
+SEIS MESES DE NÓS — EMMANUEL & CAROL
+
+Para ver o presente, abra dist/index.html no navegador.
+Funciona no computador e no celular. A fonte decorativa usa internet;
+sem conexão, a página usa as fontes do próprio aparelho.
+
+PERSONALIZAR
+1. Abra dist/personalizar.js no Bloco de Notas ou no seu editor.
+2. Troque os parágrafos de carta pelo que você quiser dizer.
+3. Preencha lembranca entre as aspas quando escolher a lembrança.
+4. Coloque três fotos na pasta dist/fotos.
+5. Em cada arquivo de fotos, preencha por exemplo: "fotos/foto1.jpg".
+6. Salve e reabra a página para conferir.
+
+Não coloque aspas duplas dentro de um texto sem escrever \".
+O texto da carta é uma sugestão inicial. As fotos estão como espaços
+reservados até você adicionar as suas. Nada é enviado pela página.
+
+PARA ENTREGAR
+Copie a pasta dist inteira, com todos os arquivos e a pasta fotos.
+Você também pode compactar a pasta dist e enviar para abrir no computador.
+O aniversário de seis meses é 16 de novembro de 2026.
