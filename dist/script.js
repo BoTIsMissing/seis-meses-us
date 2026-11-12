@@ -1,7 +1,6 @@
 "use strict";
 const config = window.PRESENTE || {};
 const start = new Date(2026, 4, 16);
-const anniversary = new Date(2026, 10, 16);
 function updateTime() {
   const now = new Date();
   // Compare calendar days in UTC to avoid daylight-saving changes.
@@ -16,13 +15,21 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 30000);
 const memory = document.getElementById("memory");
-if (config.lembranca?.trim()) { memory.textContent = config.lembranca; memory.hidden = false; }
+const memoriesSection = document.getElementById("memories-section");
+if (config.lembranca?.trim()) { memory.textContent = config.lembranca; memory.hidden = false; memoriesSection.hidden = false; }
+(config.fotos || []).slice(0, 3).forEach((photo, i) => {
+  document.getElementById(`photo-${i + 1}`).closest("figure").hidden = true;
+});
 (config.fotos || []).slice(0, 3).forEach((photo, i) => {
   if (!photo.arquivo) return;
   const slot = document.getElementById(`photo-${i + 1}`);
   const img = new Image();
   img.alt = photo.descricao || "Uma lembrança nossa";
-  img.addEventListener("load", () => slot.replaceChildren(img));
+  img.addEventListener("load", () => {
+    slot.replaceChildren(img);
+    slot.closest("figure").hidden = false;
+    memoriesSection.hidden = false;
+  });
   img.src = photo.arquivo;
 });
 const text = document.getElementById("letter-text");

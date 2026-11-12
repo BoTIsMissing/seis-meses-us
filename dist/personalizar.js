@@ -10,9 +10,9 @@ window.PRESENTE = {
   ],
   // Este é um texto inicial sugerido: pode trocar todas as palavras.
   carta: [
-    "Eu queria te dar uma coisa que você pudesse abrir, ler e guardar. Então fiz este cantinho para a gente.",
-    "Desde o dia 16 de maio, a nossa história ganhou um lugar muito especial na minha vida. Celebrar seis meses com você é também celebrar os pequenos momentos que fazem tudo valer a pena.",
-    "Obrigado por fazer parte dos meus dias. Quero continuar te conhecendo, colecionando lembranças com você e encontrando motivos para sorrir ao seu lado.",
-    "Que venham mais meses, mais abraços e muitas páginas dessa história que a gente escreve junto. Feliz seis meses, meu amor. Eu te amo!"
+    "Se você está lendo isso, a minha surpresa deu certo. Eu quis fazer uma página para te mostrar quando a gente completasse seis meses de namoro. Essa aqui é a sua.",
+    "16 de maio de 2026. Eu gosto de ver essa data escrita, porque ela não é só um número no calendário: é o dia em que eu comecei a namorar você.",
+    "E agora tem outro dia 16 para guardar: 16 de novembro. Entre uma data e outra, seis meses de Emmanuel e Carol. Foi por isso que eu quis preparar uma coisa com os nossos nomes, a nossa data e umas palavras minhas para você.",
+    "Quero que você possa voltar aqui e lembrar que seu namorado sentou para fazer um site só para você. Feliz seis meses, Carol. Eu te amo."
   ]
 };

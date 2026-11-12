@@ -1,0 +1,45 @@
+/* Tema único: escuro, inclusive na carta e nos controles do navegador. */
+[hidden]{display:none!important}
+body{background-image:radial-gradient(ellipse at 85% 8%,#71344f20,transparent 38%),radial-gradient(ellipse at 5% 65%,#49304b14,transparent 45%)}
+.topbar{padding-top:30px;padding-bottom:30px}
+.hero{grid-template-columns:1.25fr 1fr;gap:40px}
+h1{font-size:clamp(46px,5.1vw,72px);line-height:1.15}
+.intro{max-width:390px}
+.hero-copy .eyebrow{letter-spacing:2.5px}
+.paper{transform:rotate(3deg);box-shadow:0 25px 70px #0007;border:1px solid #44313e;border-radius:5px}
+.paper-border{border-color:#443541;padding-top:20px}
+.small-note{letter-spacing:1px;font:10px var(--sans);color:#c4a7b7}
+.date-number{font:136px/1.1 var(--serif);letter-spacing:-9px;color:#e4a2ad;margin:12px 0 28px}
+.date-number span{display:block;font:9px var(--sans);letter-spacing:2px;margin-top:8px;color:#b8a1b0}
+.paper-names{font-size:30px;line-height:1.25}
+.paper-names br{display:none}
+.paper-names span{font-size:25px;margin:0 5px}
+.paper-date{font-size:9px;letter-spacing:1.7px;margin-top:30px;color:#c8b4c1}
+.paper-foot{font-size:14px}
+.round-stamp{background:#30202b;box-shadow:0 5px 25px #0005;bottom:66px;right:-9px}
+.handwritten{font-size:15px;color:#b8a1b0}
+.orbit{color:#bd8098;opacity:.65}
+.time-section{background:#18151b;border-color:#302832}
+.counter strong{color:#f3e8ee}
+.counter div span{color:#b3a3ac}
+.our-dates{max-width:1200px;margin:auto;padding:78px 44px 80px}
+.our-dates .eyebrow{margin-bottom:16px}
+.date-track{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:45px}
+.date-track article{position:relative;border-top:1px solid #51404d;padding-top:28px}
+.date-dot{width:7px;height:7px;background:#e4a2ad;display:block;border-radius:50%;position:absolute;top:-4px;left:0;box-shadow:0 0 16px #e4a2ad44}
+.date-track time{font:10px var(--sans);letter-spacing:2px;color:#e4a2ad}
+.date-track h3{font:24px var(--serif);margin:16px 0 12px;font-weight:400}
+.date-track p{font-size:13px;line-height:1.9;color:var(--muted);max-width:350px;margin:0}
+.memories{padding-top:0}
+.photo-grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.letter-section{background:radial-gradient(ellipse at 50% 100%,#4d2a4438,transparent 75%),#18151d;border-block:1px solid #302832}
+.envelope{box-shadow:0 18px 40px #0004}
+.envelope-lines:before{background:#302535}
+.seal{background:#b96783;color:#1e131c;border:1px solid #d995ac}
+.envelope-label{color:#f0dce7}
+.envelope-label small{color:#bca8b6}
+.ending>span{color:#e4a2ad}
+dialog{background:linear-gradient(145deg,#25202b,#19161e);border-color:#58404f;box-shadow:0 25px 100px #0009}
+dialog::backdrop{background:#08070cce}
+#letter-text p{color:#cec0c9}
+@media(max-width:700px){.hero{grid-template-columns:1fr;gap:35px}h1{font-size:47px}.hero .intro{max-width:360px}.date-number{font-size:108px;margin-bottom:23px}.paper-names{font-size:24px}.paper-names span{font-size:22px}.round-stamp{right:-2px;bottom:60px}.our-dates{padding:55px 26px}.date-track{grid-template-columns:1fr;gap:35px;margin-top:32px}.date-track h3{font-size:23px}.memories{padding-top:0}.letter-section h2{font-size:28px}}

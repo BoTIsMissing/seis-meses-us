@@ -20,3 +20,6 @@ PARA ENTREGAR
 Copie a pasta dist inteira, com todos os arquivos e a pasta fotos.
 Você também pode compactar a pasta dist e enviar para abrir no computador.
 O aniversário de seis meses é 16 de novembro de 2026.
+
+O tema é exclusivamente escuro. O álbum fica oculto até existir uma
+foto carregada ou uma lembrança preenchida em personalizar.js.
