@@ -22,7 +22,7 @@ class Element {
 }
 function setup() {
   const elements = new Map();
-  const html = fs.readFileSync(path.join(root, 'dist/index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   for (const [, id] of html.matchAll(/id="([^"]+)"/g)) elements.set(id, new Element());
   const timers = new Map(); let timerId = 0;
   const context = {
@@ -34,8 +34,8 @@ function setup() {
     clearTimeout(id) { timers.delete(id); }
   };
   vm.createContext(context);
-  vm.runInContext(fs.readFileSync(path.join(root, 'dist/personalizar.js'), 'utf8'), context);
-  vm.runInContext(fs.readFileSync(path.join(root, 'dist/jogos.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(root, 'personalizar.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(root, 'jogos.js'), 'utf8'), context);
   return { get: id => elements.get(id), timers, settings: context.window.PRESENTE };
 }
 const { get, timers, settings } = setup();
@@ -60,7 +60,7 @@ cards = get('match-board').children;
 const pairs = new Map();
 for (const card of cards) {
   const source = card.firstElementChild.src;
-  assert(fs.existsSync(path.join(root, 'dist', source)));
+  assert(fs.existsSync(path.join(root, source)));
   if (!pairs.has(source)) pairs.set(source, []);
   pairs.get(source).push(card);
 }

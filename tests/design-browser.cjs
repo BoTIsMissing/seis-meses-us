@@ -53,7 +53,7 @@ async function screenshot(name) {
     await command('Page.enable'); await command('Runtime.enable');
     for (const width of [320, 390, 768, 1440]) {
       await command('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: false });
-      await command('Page.navigate', { url: pathToFileURL(path.join(root, 'dist/index.html')).href });
+      await command('Page.navigate', { url: pathToFileURL(path.join(root, 'index.html')).href });
       for (let i = 0; i < 30; i++) {
         if (await evaluate("document.querySelectorAll('#photo-grid .album-photo').length === 37 && !!document.querySelector('.quiz-option')")) break;
         await delay(150);

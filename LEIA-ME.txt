@@ -1,14 +1,21 @@
 SEIS MESES DE NÓS — EMMANUEL & CAROL
 
-Para ver o presente, abra dist/index.html no navegador.
+GITHUB PAGES
+O index.html, os arquivos CSS/JS e a pasta fotos estão na raiz.
+Em Settings > Pages, selecione Deploy from a branch > main > / (root).
+Endereço após publicar: https://botismissing.github.io/seis-meses-us/
+Não é necessário rodar um comando de build para o GitHub Pages.
+Para empacotar para a hospedagem Sites anterior, use node scripts/build-site.cjs.
+
+Para ver o presente, abra index.html no navegador.
 Funciona no computador e no celular. A fonte decorativa usa internet;
 sem conexão, a página usa as fontes do próprio aparelho.
 
 PERSONALIZAR
-1. Abra dist/personalizar.js no Bloco de Notas ou no seu editor.
+1. Abra personalizar.js no Bloco de Notas ou no seu editor.
 2. Troque os parágrafos de carta pelo que você quiser dizer.
 3. Preencha lembranca entre as aspas quando escolher a lembrança.
-4. Coloque as fotos na pasta dist/fotos. O álbum aceita mais de três.
+4. Coloque as fotos na pasta fotos. O álbum aceita mais de três.
 5. Na lista fotos, adicione um item para cada imagem:
    { arquivo: "fotos/foto1.jpg", descricao: "Descrição da foto", legenda: "Sua legenda" }
    Separe os itens com vírgula. Use destaque: true em uma foto para ampliá-la no álbum.
@@ -28,7 +35,7 @@ Se precisar, corrija data em personalizar.js. Fotos sem data vão para o final.
 No mesmo dia, sem horário disponível, a sequência segue o nome do arquivo.
 
 PARA ENTREGAR
-Copie a pasta dist inteira, com todos os arquivos e a pasta fotos.
+Copie index.html, os arquivos CSS e JS da raiz e a pasta fotos.
 Você também pode compactar a pasta dist e enviar para abrir no computador.
 O aniversário de seis meses é 16 de novembro de 2026.
 
@@ -41,7 +48,7 @@ A foto da abertura pode ser trocada no elemento hero-photo do index.html.
 JOGOS
 O jogo da memória usa seis fotos diferentes do álbum, em doze cartas.
 Começar ou Embaralhar de novo inicia uma partida sem limite de tempo.
-O quiz pode ser editado na lista quiz em dist/personalizar.js.
+O quiz pode ser editado na lista quiz em personalizar.js.
 Cada pergunta tem pergunta, opcoes, resposta e explicacao.
 resposta é a posição correta na lista, começando em 0 (a primeira opção).
 O botão Jogar de novo zera a pontuação. Não precisa de internet para jogar.
