@@ -9,23 +9,26 @@
   <title>Emmanuel & Carol · Seis meses de nós</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="night.css">
+  <link rel="stylesheet" href="jogos.css">
+  <link rel="stylesheet" href="design.css">
   <script src="personalizar.js" defer></script>
   <script src="script.js" defer></script>
+  <script src="jogos.js" defer></script>
 </head>
 <body>
-  <header class="topbar"><a class="monogram" href="#inicio" aria-label="Início">E <span>♡</span> C</a><a class="top-link" href="#carta">Uma carta para você ↗</a></header>
+  <header class="topbar"><a class="monogram" href="#inicio" aria-label="Início">E <span>♡</span> C</a><nav class="page-shortcuts" aria-label="Atalhos da página"><a class="top-link" href="#jogos">Vamos jogar ↗</a><a class="top-link" href="#carta">Sua cartinha ↗</a></nav></header>
   <main>
     <section class="hero" id="inicio">
       <div class="hero-copy">
-        <p class="eyebrow">DE EMMANUEL, SÓ PARA CAROL</p>
-        <h1>Carol,<br>olha o que o<br><em>nosso dia 16 virou.</em></h1>
+        <p class="eyebrow">DE EMMANUEL, SÓ PARA CAROL (Meu Amor)</p>
+        <h1>Carol, meu amor,<br>olha o que o<br><em>nosso dia 16 virou.</em></h1>
         <p class="intro">16 de maio de 2026. A data em que começamos a namorar. Seis meses depois, eu quis transformar esse dia em uma coisa que você pudesse guardar.</p>
         <a class="button" href="#carta">Carol, abre aqui <span aria-hidden="true">↗</span></a>
-        <p class="byline">Eu fiz essa página pensando em você. — Emmanuel</p>
+        <p class="byline">Eu fiz essa página pensando em você, meu amor.</p>
       </div>
       <div class="keepsake" aria-label="Uma pequena dedicatória para Carol">
         <span class="orbit orbit-one" aria-hidden="true">✧</span>
-        <div class="paper"><div class="paper-border"><p class="small-note">tem uma data que é nossa.</p><div class="date-number">16<span>MAIO → NOVEMBRO / 2026</span></div><div class="paper-names">Emmanuel<br><span>&</span> Carol</div><p class="paper-date">16.05.2026 — 16.11.2026</p><p class="paper-foot">seis meses de namoro.</p></div></div>
+        <div class="paper hero-photo"><img src="fotos/1782441680370.png" alt="Emmanuel e Carol abraçados, olhando um para o outro" width="896" height="1195" fetchpriority="high"><div class="hero-photo-note"><span>16.05 → 16.11.2026</span><p>Emmanuel <em>&</em> Carol</p><small>seis meses. nós dois.</small></div></div>
         <div class="round-stamp" aria-hidden="true">PARA<br><span>♡</span><br>CAROL</div>
         <p class="handwritten">de um dia 16 para o outro.</p>
         <span class="orbit orbit-two" aria-hidden="true">✧</span>
@@ -41,14 +44,41 @@
       <h2 id="dates-title">De maio <em>até aqui.</em></h2>
       <div class="date-track"><article><span class="date-dot" aria-hidden="true"></span><time datetime="2026-05-16">16 MAI 2026</time><h3>O dia em que começamos.</h3><p>Emmanuel e Carol. O primeiro dia do nosso namoro.</p></article><article><span class="date-dot" aria-hidden="true"></span><time datetime="2026-11-16">16 NOV 2026</time><h3>Seis meses. E esta surpresa.</h3><p>Uma página que eu fiz para você, Carol, para marcar o nosso dia.</p></article></div>
     </section>
-    <section class="memories" id="memories-section" aria-labelledby="memories-title" hidden>
+    <section class="memories" id="memories-section" aria-labelledby="memories-title">
       <div class="section-top"><div><p class="eyebrow">O NOSSO ÁLBUM, CAROL</p><h2 id="memories-title">Eu, você <em>e o que a gente viveu.</em></h2></div><span class="tiny-heart" aria-hidden="true">♡</span></div>
-      <div class="photo-grid">
+      <p class="album-intro">Dos sorrisos às caras e bocas. Eu gosto de todas as nossas versões.</p>
+      <p class="album-hint">Toque em uma foto para olhar mais de perto.</p>
+      <div class="photo-grid" id="photo-grid">
         <figure class="polaroid"><div class="photo-slot" id="photo-1"><span aria-hidden="true">☼</span><p>Um sorriso nosso</p></div><figcaption>01 / a felicidade nos detalhes</figcaption></figure>
         <figure class="polaroid"><div class="photo-slot" id="photo-2"><span aria-hidden="true">♡</span><p>Um momento só nosso</p></div><figcaption>02 / meu lugar favorito é com você</figcaption></figure>
         <figure class="polaroid"><div class="photo-slot" id="photo-3"><span aria-hidden="true">✧</span><p>Uma lembrança para guardar</p></div><figcaption>03 / que venham tantas outras</figcaption></figure>
       </div>
       <blockquote id="memory" hidden></blockquote>
+    </section>
+    <section class="play-section" id="jogos" aria-labelledby="play-title">
+      <p class="eyebrow">UMA PAUSA PARA BRINCAR COMIGO</p>
+      <h2 id="play-title">Carol, bora ver se você <em>lembra?</em></h2>
+      <p class="play-intro">Nossas fotos viraram um jogo. E a nossa história, umas perguntinhas.</p>
+      <div class="play-layout">
+        <article class="game-panel" aria-labelledby="match-title">
+          <span class="game-tag">01 / NOSSAS FOTOS</span><h3 id="match-title">Memória de nós dois</h3>
+          <p class="game-description">Encontre os 6 pares. Vale olhar bem para as nossas caras.</p>
+          <div class="game-toolbar"><p id="match-stats">0 de 6 pares · 0 jogadas</p><button class="game-action secondary" id="match-start" type="button">Começar</button></div>
+          <div id="match-board" class="match-board" aria-label="Cartas do jogo da memória"><p class="game-empty">Doze cartas. Seis pedacinhos da gente.<br>Toque em começar para embaralhar.</p></div>
+          <p class="game-feedback" id="match-feedback" role="status">Sem cronômetro. Pode ir no seu tempo.</p>
+        </article>
+        <article class="game-panel quiz-panel" aria-labelledby="quiz-title">
+          <span class="game-tag">02 / NOSSA HISTÓRIA</span><h3 id="quiz-title">O quanto você lembra da gente?</h3>
+          <p class="game-description">Um quiz feito para você. Sem pressão: no fim, eu continuo sendo seu namorado.</p>
+          <div class="quiz-progress-row"><span id="quiz-position"></span><span id="quiz-score">0 acertos</span></div>
+          <progress id="quiz-progress" value="0" max="4" aria-label="Perguntas respondidas"></progress>
+          <h4 id="quiz-question" tabindex="-1"></h4>
+          <div id="quiz-options" class="quiz-options"></div>
+          <p class="game-feedback" id="quiz-feedback" role="status"></p>
+          <button class="game-action" id="quiz-next" type="button" hidden>Próxima pergunta →</button>
+          <button class="game-action secondary" id="quiz-restart" type="button" hidden>Jogar de novo</button>
+        </article>
+      </div>
     </section>
     <section class="letter-section" id="carta" aria-labelledby="letter-title">
       <p class="eyebrow">DE MIM PARA VOCÊ, CAROL</p>
@@ -60,5 +90,10 @@
   </main>
   <footer>Emmanuel & Carol <span>·</span> 16.05.2026 <span>·</span> Nossa história continua.</footer>
   <dialog id="letter-dialog" aria-labelledby="dialog-title"><button class="close" id="close-letter" aria-label="Fechar carta">×</button><p class="eyebrow">UMA CARTA PARA MEU AMOR</p><h2 id="dialog-title">Carol,</h2><div id="letter-text"></div><p class="signature">Com amor,<br><em>Emmanuel</em></p><span class="dialog-heart" aria-hidden="true">♡</span></dialog>
+  <dialog id="photo-dialog" class="photo-dialog" aria-label="Álbum de Emmanuel e Carol">
+    <div class="viewer-top"><span id="photo-position" aria-live="polite"></span><button class="viewer-close" id="close-photo" aria-label="Fechar foto">×</button></div>
+    <div class="viewer-stage"><button class="viewer-arrow" id="previous-photo" aria-label="Foto anterior">‹</button><img id="large-photo" alt=""><button class="viewer-arrow" id="next-photo" aria-label="Próxima foto">›</button></div>
+    <p id="photo-caption" class="viewer-caption"></p><p class="viewer-hint">Use as setas ou deslize para passar · Esc para fechar</p>
+  </dialog>
 </body>
 </html>

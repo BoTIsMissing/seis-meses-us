@@ -8,18 +8,41 @@ PERSONALIZAR
 1. Abra dist/personalizar.js no Bloco de Notas ou no seu editor.
 2. Troque os parágrafos de carta pelo que você quiser dizer.
 3. Preencha lembranca entre as aspas quando escolher a lembrança.
-4. Coloque três fotos na pasta dist/fotos.
-5. Em cada arquivo de fotos, preencha por exemplo: "fotos/foto1.jpg".
+4. Coloque as fotos na pasta dist/fotos. O álbum aceita mais de três.
+5. Na lista fotos, adicione um item para cada imagem:
+   { arquivo: "fotos/foto1.jpg", descricao: "Descrição da foto", legenda: "Sua legenda" }
+   Separe os itens com vírgula. Use destaque: true em uma foto para ampliá-la no álbum.
 6. Salve e reabra a página para conferir.
 
 Não coloque aspas duplas dentro de um texto sem escrever \".
-O texto da carta é uma sugestão inicial. As fotos estão como espaços
-reservados até você adicionar as suas. Nada é enviado pela página.
+O texto da carta é uma sugestão inicial. A lembrança mantém seu texto.
+37 fotos já estão configuradas, da mais antiga para a mais recente.
+Nada é enviado pela página.
+
+DATAS DAS FOTOS
+O campo data usa o formato "2026-05-16T15:00:54".
+O álbum e o visualizador ordenam as fotos automaticamente por esse campo.
+Cinco datas vieram da captura original (EXIF); as demais, dos nomes dos arquivos.
+Em fotos do WhatsApp, a data do nome pode ser a do envio, não a da captura.
+Se precisar, corrija data em personalizar.js. Fotos sem data vão para o final.
+No mesmo dia, sem horário disponível, a sequência segue o nome do arquivo.
 
 PARA ENTREGAR
 Copie a pasta dist inteira, com todos os arquivos e a pasta fotos.
 Você também pode compactar a pasta dist e enviar para abrir no computador.
 O aniversário de seis meses é 16 de novembro de 2026.
 
-O tema é exclusivamente escuro. O álbum fica oculto até existir uma
-foto carregada ou uma lembrança preenchida em personalizar.js.
+O tema é exclusivamente escuro. Toque em uma foto para ampliar.
+No visualizador, use os botões, as setas do teclado ou deslize no celular.
+Pressione Esc ou o botão × para fechar. As fotos são mostradas inteiras.
+Se a lista de fotos estiver vazia, os três espaços originais aparecem.
+A foto da abertura pode ser trocada no elemento hero-photo do index.html.
+
+JOGOS
+O jogo da memória usa seis fotos diferentes do álbum, em doze cartas.
+Começar ou Embaralhar de novo inicia uma partida sem limite de tempo.
+O quiz pode ser editado na lista quiz em dist/personalizar.js.
+Cada pergunta tem pergunta, opcoes, resposta e explicacao.
+resposta é a posição correta na lista, começando em 0 (a primeira opção).
+O botão Jogar de novo zera a pontuação. Não precisa de internet para jogar.
+Para verificar a lógica dos jogos com Node: node tests/jogos.test.cjs
